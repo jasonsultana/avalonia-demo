@@ -1,19 +1,14 @@
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
-using Avalonia.NETCoreMVVMApp.ViewModels;
 
 namespace Avalonia.NETCoreMVVMApp.Views
 {
-    public class MainWindow : Window
+    public class AddItemView : UserControl
     {
-        public MainWindow()
+        public AddItemView()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
         }
 
         private void InitializeComponent()

@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.NETCoreMVVMApp.Services;
 using Avalonia.NETCoreMVVMApp.ViewModels;
 using Avalonia.NETCoreMVVMApp.Views;
 
@@ -17,9 +18,11 @@ namespace Avalonia.NETCoreMVVMApp
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                var db = new Database();
+                
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new MainWindowViewModel(db),
                 };
             }
 
