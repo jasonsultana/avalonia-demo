@@ -10,6 +10,11 @@
             Width="200" 
             Command="{Binding $parent[Window].DataContext.AddItem}">Add an item</Button>
         
+        <Button
+            DockPanel.Dock="Bottom"
+            Width="200"
+            Command="{Binding $parent[Window].DataContext.SaveToFile}">Save to file</Button>
+        
         <ItemsControl Items="{Binding Items}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
